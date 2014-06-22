@@ -58,7 +58,7 @@ asciify('Starting tests : ', {
 		if (err) {
 			log.error(err);
 		} else {
-			data._url = config.website;
+			data[0]._url = config.website;
 			log.info('--results:start--');
 			log.info(JSON.stringify(data));
 			log.info('--results:end--');
@@ -78,8 +78,8 @@ asciify('Starting tests : ', {
 			build: config.website,
 			tags: ["perfmonkey.com"]
 		}],
-		//selenium: "http://localhost:4444/wd/hub",
-		selenium: "ondemand.saucelabs.com",
+		selenium: "http://localhost:4444/wd/hub",
+		//selenium: "ondemand.saucelabs.com",
 		username: config.sauce_username || 'perfmonkey-test',
 		accesskey: config.sauce_accesskey || '32b71b26-f0b6-49f1-bb03-db401782c783',
 		logger: log
