@@ -81,6 +81,12 @@ asciify('Starting tests : ', {
 			'command-timeout': 600,
 			'max-duration': 600
 		}],
+		metrics: ['RafRenderingStats',
+			'NavTimingMetrics',
+			'ChromeTimelineMetrics',
+		//	'ChromeTracingMetrics',
+			'RuntimePerfMetrics'
+		]
 		//selenium: "http://localhost:4444/wd/hub",
 		selenium: "ondemand.saucelabs.com",
 		username: config.sauce_username || 'perfmonkey-test',
