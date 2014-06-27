@@ -76,7 +76,10 @@ asciify('Starting tests : ', {
 			version: 35,
 			name: config.name || 'perfmonkey.com',
 			build: config.website,
-			tags: ["perfmonkey.com"]
+			tags: ["perfmonkey.com"],
+			'idle-timeout': 180,
+			'command-timeout': 600,
+			'max-duration': 600
 		}],
 		//selenium: "http://localhost:4444/wd/hub",
 		selenium: "ondemand.saucelabs.com",
