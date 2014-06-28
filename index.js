@@ -8,7 +8,7 @@ var log = {
 	'warn': console.warn.bind(console),
 	'info': console.info.bind(console),
 	'debug': console.log.bind(console),
-	'trace': console.trace.bind(console),
+	'trace': console.log.bind(console),
 };
 
 var generateTable = function(data) {
@@ -73,6 +73,7 @@ asciify('Starting tests : ', {
 	}, {
 		browsers: [{
 			browserName: 'chrome',
+			platform: 'linux',
 			version: 35,
 			name: config.name || 'perfmonkey.com',
 			build: config.website,
@@ -84,9 +85,9 @@ asciify('Starting tests : ', {
 		metrics: ['RafRenderingStats',
 			'NavTimingMetrics',
 			'ChromeTimelineMetrics',
-		//	'ChromeTracingMetrics',
+			'ChromeTracingMetrics',
 			'RuntimePerfMetrics'
-		]
+		],
 		//selenium: "http://localhost:4444/wd/hub",
 		selenium: "ondemand.saucelabs.com",
 		username: config.sauce_username || 'perfmonkey-test',
