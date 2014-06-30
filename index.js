@@ -73,7 +73,6 @@ asciify('Starting tests : ', {
 	}, {
 		browsers: [{
 			browserName: 'chrome',
-			platform: 'linux',
 			version: 35,
 			name: config.name || 'perfmonkey.com',
 			build: config.website,
